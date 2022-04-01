@@ -13,6 +13,13 @@ const cats = [
 ];
 
 // Q1
+const cat = {
+  complain: function () {
+    console.log("Meow!");
+  },
+};
+
+console.log(cat.complain());
 
 // Q2
 const heading = document.querySelector("h3");
@@ -22,12 +29,12 @@ heading.innerHTML = "Updated heading";
 heading.style.fontSize = "2em";
 
 // Q4
-heading.classList.add = "subheading";
+heading.className = "subheading";
 
 // Q5
 const paragraphs = document.querySelectorAll("p");
 
-for (i = 0; i < paragraphs.length; i++) {
+for (let i = 0; i < paragraphs.length; i++) {
   paragraphs[i].style.color = "red";
 }
 
@@ -47,11 +54,10 @@ function logName(list) {
 logName(cats);
 
 // Q8
-
 function createCats(cats) {
   let html = "";
 
-  for (i = 0; i < cats.length; i++) {
+  for (let i = 0; i < cats.length; i++) {
     let catAge = "Age Unknown";
     if (cats[i].age) {
       catAge = cats[i].age;
